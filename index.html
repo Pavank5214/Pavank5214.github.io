@@ -25,6 +25,35 @@
     }
     
     /* hero section */
+
+
+    .hero-section {
+  background-image: url('home.jpg'); /* Replace with your image URL */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
+  height: 100vh; /* Full viewport height */
+  color: white; /* Adjust text color for better contrast */
+  position: relative; /* Maintain layout context */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add overlay for text readability */
+  z-index: 1; /* Ensure overlay is above the background image */
+}
+
+.hero-section .container {
+  position: relative; /* Ensure content stays above the overlay */
+  z-index: 2;
+}
+
+
     .hero-section {
       display: flex;
       justify-content: center;
@@ -145,14 +174,14 @@
 </nav>
 
 
-  <!-- Hero Section -->
-  <header id="home" class="hero-section d-flex align-items-center">
-    <div class="container text-center">
-      <h1 class="fw-bold" data-aos="fade-down">Welcome to Paripoorna Enterprises</h1>
-      <p class="lead mt-3" data-aos="fade-up">Innovative Designs for a Better Tomorrow</p>
-      <a href="#portfolio" class="btn btn-primary btn-lg mt-4" data-aos="zoom-in" data-aos-delay="200">Explore Portfolio</a>
-    </div>
-  </header>
+<header id="home" class="hero-section d-flex align-items-center">
+  <div class="container text-center">
+    <h1 class="fw-bold" data-aos="fade-down">Welcome to Paripoorna Enterprises</h1>
+    <p class="lead mt-3" data-aos="fade-up">Innovative Designs for a Better Tomorrow</p>
+    <a href="#portfolio" class="btn btn-primary btn-lg mt-4" data-aos="zoom-in" data-aos-delay="200">Explore Portfolio</a>
+  </div>
+</header>
+
 
   <!-- About Section -->
   <section id="about" class="py-5">
