@@ -2,129 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1024">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Paripoorna | Innovative Design Studio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    @media screen and (max-width: 768px) {
-  body {
-    display: block;
-    font-size: 18px;  /* Desktop font-size for mobile */
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #444;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+    .navbar-nav .nav-link {
+    font-size: 1.2rem; /* Adjust the size as needed */
   }
-  /* Apply other desktop styles */
+  .navbar-brand {
+    font-size: 1.9rem; /* Adjust the brand size */
+  }
+
+    /* Hero Section */
+    .hero-section {
+      background-image: url('home.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Services Section */
+    #services .service-card {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+
+    #services .service-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    }
+    .service-icon {
+  font-size: 3rem; /* Adjust the size as needed */
+  margin-bottom: 15px; /* Add some space below the icon */
 }
 
-    /* Custom Styles */
-   /* Global Styles for Mobile, Tablet, and Laptop */
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #444;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #f8f9fa;
-  overflow-x: hidden;
-}
+    /* Feedback Section */
+    #feedback .testimonial {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
 
-/* hero section */
-.hero-section {
-  background-image: url('home.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  color: white;
-  position: relative;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.hero-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Services Section */
-#services .service-card {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  padding: 30px;
-  margin-bottom: 20px;
-}
-
-#services .service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-#services .service-icon {
-  font-size: 3rem;
-  color: #ff5722;
-  margin-bottom: 20px;
-}
-
-#services h3 {
-  font-weight: 600;
-}
-
-/* Feedback Section */
-#feedback .testimonial {
-  background: white;
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-#feedback .testimonial:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-#feedback .client-name {
-  font-weight: bold;
-  color: #ff5722;
-  margin-top: 15px;
-}
-
-
-
+    #feedback .testimonial:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
   </style>
 </head>
 <body>
- <!-- Navbar -->
+
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
   <div class="container">
-   <!-- Logo or Brand Name -->
-<a class="navbar-brand" href="#" style="font-family: 'Poppins', sans-serif; font-size: 1.3rem; color: #ffffff; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-  Paripoorna Enterprises
-</a>
-
-    <!-- Toggler -->
+    <a class="navbar-brand" href="#">Paripoorna Enterprises</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- Navigation Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -139,7 +118,7 @@ body {
   </div>
 </nav>
 
-<!--hero section-->
+<!-- Hero Section -->
 <header id="home" class="hero-section d-flex align-items-center">
   <div class="container text-center">
     <h1 class="fw-bold" data-aos="fade-down">Welcome to Paripoorna Enterprises</h1>
@@ -148,73 +127,66 @@ body {
   </div>
 </header>
 
-
-  <!-- About Section -->
-  <section id="about" class="py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6" data-aos="fade-right">
-          <img src="about.jpg" alt="About Paripoorna" class="img-fluid rounded shadow">
-        </div>
-        <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
-          <h2 class="fw-bold">About Paripoorna Enterprises</h2>
-          <p class="text-muted">At Paripoorna, we focus on delivering timeless and innovative designs that resonate with our clients' visions. Our passion drives us to create spaces that inspire and transform.</p>
-        </div>
+<!-- About Section -->
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="about.jpg" alt="About Paripoorna" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6 text-center text-md-start" data-aos="fade-left">
+        <h2 class="fw-bold">About Paripoorna Enterprises</h2>
+        <p class="text-muted">At Paripoorna, we focus on delivering timeless and innovative designs that resonate with our clients' visions. Our passion drives us to create spaces that inspire and transform.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Services Section -->
+<!-- Services Section -->
 <section id="services" class="py-5 bg-light">
   <div class="container text-center">
     <h2 class="fw-bold mb-5">Our Services</h2>
     <div class="row">
-      <!-- Architectural Designs -->
       <div class="col-md-4">
         <div class="service-card" data-aos="fade-up">
-          <div class="service-icon">🏛️</div>
+          <div class="service-icon" style="font-size: 3rem;">🏛️</div>
           <h3>Architectural Designs</h3>
           <p>Innovative and sustainable architectural solutions tailored to your vision.</p>
         </div>
       </div>
-      <!-- Construction -->
       <div class="col-md-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon">🏗️</div>
+          <div class="service-icon" style="font-size: 3rem;">🏗️</div>
           <h3>Construction</h3>
           <p>High-quality construction services with a focus on durability and precision.</p>
         </div>
       </div>
-      <!-- Interiors -->
       <div class="col-md-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon">🛋️</div>
+          <div class="service-icon" style="font-size: 3rem;">🛋️</div>
           <h3>Interiors</h3>
           <p>Stylish and functional interior designs that reflect your personality.</p>
         </div>
       </div>
     </div>
     <div class="row mt-4">
-      <!-- PWD Civil Contractor -->
       <div class="col-md-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon">🛠️</div>
+          <div class="service-icon" style="font-size: 3rem;">🛠️</div>
           <h3>PWD Civil Contractor</h3>
           <p>Licensed and experienced contractor for all public works department projects.</p>
         </div>
       </div>
-      <!-- Renovation -->
       <div class="col-md-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon">🔨</div>
+          <div class="service-icon" style="font-size: 3rem;">🔨</div>
           <h3>Renovation</h3>
           <p>Transforming spaces to create a fresh, modern look with minimal hassle.</p>
         </div>
       </div>
-      <!-- Material Contract -->
       <div class="col-md-4">
         <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon">🚚</div>
+          <div class="service-icon" style="font-size: 3rem;">🚚</div>
           <h3>Material Contract</h3>
           <p>Reliable sourcing and delivery of high-quality building materials.</p>
         </div>
@@ -223,65 +195,59 @@ body {
   </div>
 </section>
 
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-5">Our Portfolio</h2>
-      <div class="row">
-        <!-- Project 1 -->
-        <div class="col-md-4 mb-4">
-          <div class="card" data-aos="zoom-in" data-aos-delay="100">
-            <img src="project1.webp" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              
-            </div>
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5">Our Portfolio</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="project1.webp" class="card-img-top" alt="Project 1 Description">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+ <p class="card-text">Description of Project 1.</p>
           </div>
         </div>
-        <!-- Project 2 -->
-        <div class="col-md-4 mb-4">
-          <div class="card" data-aos="zoom-in" data-aos-delay="200">
-            <img src="project2.webp" class="card-img-top" alt="Project 2">
-            <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              
-            </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="project2.webp" class="card-img-top" alt="Project 2 Description">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">Description of Project 2.</p>
           </div>
         </div>
-        <!-- Project 3 -->
-        <div class="col-md-4 mb-4">
-          <div class="card" data-aos="zoom-in" data-aos-delay="300">
-            <img src="project3.jpg" class="card-img-top" alt="Project 3">
-            <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              
-            </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="project3.jpg" class="card-img-top" alt="Project 3 Description">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">Description of Project 3.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 <!-- Feedback Section -->
 <section id="feedback" class="py-5">
   <div class="container">
     <h2 class="fw-bold text-center mb-5">Client Feedback</h2>
     <div class="row">
-      <!-- Testimonial 1 -->
       <div class="col-md-4">
         <div class="testimonial" data-aos="fade-up">
           <p>"Paripoorna brought our dream home to life. Their expertise in architectural designs and construction is truly commendable."</p>
           <p class="client-name">Ramesh Gowda, Bengaluru</p>
         </div>
       </div>
-      <!-- Testimonial 2 -->
       <div class="col-md-4">
         <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
           <p>"We entrusted Paripoorna with our interior design project, and they delivered beyond our expectations. Professional and efficient."</p>
-          <p class="client-name">Priya Shetty, Banglore</p>
+          <p class="client-name">Priya Shetty, Bangalore</p>
         </div>
       </div>
-      <!-- Testimonial 3 -->
       <div class="col-md-4">
         <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
           <p>"Their renovation work transformed our old house into a modern masterpiece. The team was friendly and knowledgeable."</p>
@@ -292,16 +258,13 @@ body {
   </div>
 </section>
 
-
- <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="py-5">
   <div class="container">
     <h2 class="fw-bold text-center mb-4" data-aos="fade-up">Get in Touch</h2>
     <div class="row justify-content-center">
-      <!-- Reduced width for the form -->
       <div class="col-md-6 col-lg-5">
         <form action="https://formspree.io/f/xyzypzbe" method="POST" class="p-4 shadow rounded bg-white">
-          <!-- Form fields -->
           <div class="mb-3">
             <label for="name" class="form-label fw-bold">Your Name</label>
             <input type="text" id="name" name="name" class="form-control form-control-sm" placeholder="Enter your name" required>
@@ -322,50 +285,40 @@ body {
         </form>
       </div>
     </div>
-    <!-- Contact info -->
     <div class="text-center mt-4">
       <p class="fw-bold">Or reach us directly at:</p>
-      <p><a href="mailto:paripoorna43@gmail.com" class="text-primary fw-bold">paripoorna43@gmail.com</a></p>
+      <p><a href="mailto:paripoorna43@gmail.com" class="text-primary fw-bold">paripo orna43@gmail.com</a></p>
     </div>
   </div>
 </section>
-
-
 
 <!-- Google Map Section -->
 <section id="map" class="py-5">
-<div class="container">
-  <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Find Us on the Map</h2>
-  <div class="embed-responsive embed-responsive-16by9 position-relative">
-    <!-- Embed Google Map iframe -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5055509561995!2d144.9584032145479!3d-37.81362797975168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5134fbc303%3A0x5045675218cdee0!2sMelbourne%20CBD%2C%20Victoria%2C%20Australia!5e0!3m2!1sen!2sin!4v1611014901532!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    
-    <!-- Button overlay for redirect -->
-    <a href="https://maps.app.goo.gl/qLWePiRHthWbHAUx5" target="_blank" class="btn btn-primary position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">View on Google Maps</a>
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Find Us on the Map</h2>
+    <div class="embed-responsive embed-responsive-16by9 position-relative">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5055509561995!2d144.9584032145479!3d-37.81362797975168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5134fbc303%3A0x5045675218cdee0!2sMelbourne%20CBD%2C%20Victoria%2C%20Australia!5e0!3m2!1sen!2sin!4v1611014901532!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <a href="https://maps.app.goo.gl/qLWePiRHthWbHAUx5" target="_blank" class="btn btn-primary position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">View on Google Maps</a>
+    </div>
   </div>
-</div>
 </section>
 
+<!-- Footer -->
+<footer class="bg-dark text-light py-3">
+  <div class="container text-center">
+    <p class="mb-2">Follow us on:</p>
+    <a href="https://facebook.com" target="_blank" class="text-primary mx-2">Facebook</a>
+    <a href="https://twitter.com" target="_blank" class="text-primary mx-2">Twitter</a>
+    <a href="https://instagram.com" target="_blank" class="text-primary mx-2">Instagram</a>
+    <p class="mt-3 mb-0">© 2024 Paripoorna Enterprises. All Rights Reserved.</p>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-light py-3">
-    <div class="container text-center">
-      <p class="mb-2">Follow us on:</p>
-      <a href="https://facebook.com" target="_blank" class="text-primary mx-2">Facebook</a>
-      <a href="https://twitter.com" target="_blank" class="text-primary mx-2">Twitter</a>
-      <a href="https://instagram.com" target="_blank" class="text-primary mx-2">Instagram</a>
-      <p class="mt-3 mb-0">© 2024 Paripoorna Enterprises. All Rights Reserved.</p>
-    </div>
-  </footer>
-  
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 </body>
 </html>
